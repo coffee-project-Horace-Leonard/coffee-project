@@ -3,11 +3,9 @@
     place-content: center;
 }
 
-/*body {*/
-/*    background-image: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);*/
-/*    background-size: cover;*/
-/*    animation: gradient-animation 5s ease-in-out infinite;*/
-/*}*/
+body {
+    /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtFglNMDCIql6_YagCbeqH5RCZS-sE2Y8V6Q&usqp=CAU");*/
+}
 
 hr {
     width: 90%;
