@@ -32,7 +32,13 @@ tbody.innerHTML = renderCoffees(coffees);
 roastSelection.addEventListener('input', updateCoffees);
 coffeeName.addEventListener('input', updateCoffees);
 submitButton2.addEventListener('click', createCoffee);
-//temp function
+
+var form = document.querySelector("form");
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent the form from submitting
+    form.reset(); // clear all the form fields
+});
+//Functions here -------------
 function createCoffee(){
     var newRoast = coffeeAddition.value,
         newName = nameAddition.value,
@@ -45,8 +51,15 @@ function createCoffee(){
         };
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
+    localStorage.setItem('coffees', JSON.stringify(coffees));
 }
-//Functions here -------------
+
+const retrievedObject = JSON.parse(localStorage.getItem("coffees"));
+if(retrievedObject !== null) {
+    coffees = retrievedObject;
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
 function renderCoffee(coffee) {
     return `<div class="coffee">
               <h2>${coffee.name}</h2>
@@ -74,5 +87,4 @@ function updateCoffees(e) {
         });
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
-}//this filters the list to show only what is desired.
-
+}
