@@ -33,14 +33,14 @@ roastSelection.addEventListener('input', updateCoffees);
 coffeeName.addEventListener('input', updateCoffees);
 submitButton2.addEventListener('click', createCoffee);
 
-var form = document.querySelector("form");
+let form = document.querySelector("form");
 form.addEventListener("submit", function(event) {
     event.preventDefault(); // prevent the form from submitting
     form.reset(); // clear all the form fields
 });
 //Functions here -------------
 function createCoffee(){
-    var newRoast = coffeeAddition.value,
+    let newRoast = coffeeAddition.value,
         newName = nameAddition.value,
         idCoffee = coffees.length + 1,
         // ||above outlines  the established parameters|| for the ||new coffee object below||
