@@ -18,11 +18,11 @@ var coffees = [ //used to store all the coffee into a variable
     {id: 14, name: 'French', roast: 'dark'},
 ];
 //used in the first form
-var tbody = document.querySelector('#coffees'),
+let tbody = document.querySelector('#coffees'),
     submitButton1 = document.querySelector('#submit'),
     roastSelection = document.querySelector('#roast-selection');
 //custom var
-var coffeeName = document.querySelector('#name-selection'),
+let coffeeName = document.querySelector('#name-selection'),
     coffeeAddition = document.querySelector('#roast-addition'),
     nameAddition = document.querySelector('#name-addition'),
     submitButton2 = document.querySelector('#submit1');
