@@ -59,7 +59,6 @@ if(retrievedObject !== null) {
     coffees = retrievedObject;
     tbody.innerHTML = renderCoffees(coffees);
 }
-
 function renderCoffee(coffee) {
     return `<div class="coffee">
               <h2>${coffee.name}</h2>
