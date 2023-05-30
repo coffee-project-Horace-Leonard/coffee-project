@@ -53,7 +53,6 @@ function createCoffee(){
     tbody.innerHTML = renderCoffees(coffees);
     localStorage.setItem('coffees', JSON.stringify(coffees));
 }
-
 const retrievedObject = JSON.parse(localStorage.getItem("coffees"));
 if(retrievedObject !== null) {
     coffees = retrievedObject;
